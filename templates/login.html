@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel='stylesheet' type='text/css' href='{{ url_for('static', filename='css/styles.css') }}'/>
+  </head>
+  <body>
+    <div class='title'>
+      <h2>LOGIN</h2>
+    </div>
+    <div class='form'>
+      <form  method='POST'>
+        <p>Email: <input type='email' name='userEmail'/></p>
+        <p>Password: <input type='password' name='userPass'/></p>
+        <button type='submit' value='submit'>Login</button>
+      </form>
+    </div>
+    <p> {% if username %} 
+           Welcome to the flask demo, {{ username }} !
+        {% endif %}
+    </p>
+  </body>
+</html>
